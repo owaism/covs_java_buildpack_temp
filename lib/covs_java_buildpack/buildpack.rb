@@ -31,8 +31,8 @@ module CovsJavaBuildpack
 			#exec "mkdir #{cache_dir}"
 			exec "tar -xvf #{build_dir}/../../buildpacks/covs_java_buildpack/vendor/apache2.tar -C /tmp "
 			puts "Untared.. "
-			apache2Dir = File.join "/tmp", "apache2"
-			if File.exists? (apache2Dir)
+			
+			if true
 				puts "Apache2 Untarred..."
 			else
 				puts "APACHE2 UNTARRING ERRORR"
