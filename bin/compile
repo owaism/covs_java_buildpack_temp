@@ -1,0 +1,12 @@
+#!/usr/bin/env ruby
+
+
+$stdout.sync = true
+$stderr.sync = true
+$LOAD_PATH.unshift File.expand_path('../../lib', __FILE__)
+
+
+require 'covs_java_buildpack/buildpack'
+include CovsJavaBuildpack
+
+Buildpack.compile (ARGV[0], ARGV[1])
