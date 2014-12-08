@@ -26,10 +26,14 @@ module CovsJavaBuildpack
 
 
 		def Buildpack.compile (build_dir, cache_dir)
-			puts "Updating apt-get"
-			exec 'sudo apt-get update'
-			puts "installing apache2"
-			exec 'sudo apt-get install apache2'
+			puts "Untaring apache 2.."
+			exec "tar xvf  -c #{cache_dir} #{build_dir}/../vendor/apache2.tar"
+			apache2Dir = File.join cache_dir, "apache2"
+			if File.exists? (apache2Dir)
+				puts "Apache2 Untarred..."
+			else
+				puts "APACHE2 UNTARRING ERRORR"
+			end
 		end
 
 	end
