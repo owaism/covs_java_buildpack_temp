@@ -27,7 +27,7 @@ module CovsJavaBuildpack
 
 		def Buildpack.compile (build_dir, cache_dir)
 			puts "Untaring apache 2.."
-			exec "tar -xvf #{build_dir}/../vendor/apache2.tar -C #{cache_dir} "
+			exec "tar -xvf #{build_dir}/../../buildpacks/covs_java_buildpack/vendor/apache2.tar -C #{cache_dir} "
 			apache2Dir = File.join cache_dir, "apache2"
 			if File.exists? (apache2Dir)
 				puts "Apache2 Untarred..."
