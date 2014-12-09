@@ -1,10 +1,7 @@
 
-
-
 $stdout.sync = true
 $stderr.sync = true
 $LOAD_PATH.unshift File.expand_path('../../lib', __FILE__)
-require 'covs_java_buildpack/logging/logger_factory'
 
 module CovsJavaBuildpack
 	class Buildpack
@@ -33,8 +30,6 @@ module CovsJavaBuildpack
 
 
 		def compile (build_dir, cache_dir)
-			@logger.debug( "Untaring apache 2..")
-			@logger.info("Logger Info")
 			#exec "echo 'unta22rring....'"
 			puts "World..."
 			puts "#{build_dir}/../../buildpacks/covs_java_buildpack/vendor/apache2.tar -C #{cache_dir} "
