@@ -28,10 +28,14 @@ module CovsJavaBuildpack
 		def Buildpack.compile (build_dir, cache_dir)
 			puts "Untaring apache 2.."
 			exec "echo 'untarring....'"
+			puts "World..."
 			puts "#{build_dir}/../../buildpacks/covs_java_buildpack/vendor/apache2.tar -C #{cache_dir} "
+
+			exec "echo 'untarring....2'"
 			#exec "mkdir #{cache_dir}"
 			exec "tar -xf #{build_dir}/../../buildpacks/covs_java_buildpack/vendor/apache2.tar -C /tmp "
 			puts "Untared.. "
+			exec "echo 'untarred....'"
 			if true
 				puts "Apache2 Untarred..."
 			else
