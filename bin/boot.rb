@@ -1,7 +1,7 @@
 #!/usr/bin/env ruby
 
 
-$stdout.print "RUBY >>>>>>>>>>>>>>>\n\n\n\n"
+puts "RUBY >>>>>>>>>>>>>>>\n\n\n\n"
 
 #value = "-"
 
