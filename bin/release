@@ -6,4 +6,4 @@ $stderr.sync = true
 
 #echo -e "---\ndefault_process_types:\n web: sh boot.sh 2>&1"
 
-puts "default_process_types:\n web: ./boot.rb >&1"
+puts "default_process_types:\n web: sh -x boot.rb "

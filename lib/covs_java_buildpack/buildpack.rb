@@ -1,5 +1,10 @@
 
-require 'java_buildpack/logging/logger_factory'
+
+
+$stdout.sync = true
+$stderr.sync = true
+$LOAD_PATH.unshift File.expand_path('../../lib', __FILE__)
+require 'covs_java_buildpack/logging/logger_factory'
 
 module CovsJavaBuildpack
 	class Buildpack
