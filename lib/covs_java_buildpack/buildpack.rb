@@ -35,7 +35,7 @@ module CovsJavaBuildpack
 			puts File.exists? "#{build_dir}/../../buildpacks/covs_java_buildpack/vendor/apache2.tar"
 			
 			#exec "mkdir #{cache_dir}"
-			exec "tar -xf #{build_dir}/../../buildpacks/covs_java_buildpack/vendor/apache2.tar -C /tmp "
+			exec "tar -xvf #{build_dir}/../../buildpacks/covs_java_buildpack/vendor/apache2.tar -C /tmp "
 			if 1==1
 				puts "Apache2 Untarred..."
 			else
