@@ -31,12 +31,10 @@ module CovsJavaBuildpack
 			puts "World..."
 			puts "#{build_dir}/../../buildpacks/covs_java_buildpack/vendor/apache2.tar -C #{cache_dir} "
 
-			echo 'untarring....2'
+			
 			#exec "mkdir #{cache_dir}"
 			exec "tar -xf #{build_dir}/../../buildpacks/covs_java_buildpack/vendor/apache2.tar -C /tmp "
-			puts "Untared.. "
-			echo 'untarred....'"
-			if true
+			if 1==1
 				puts "Apache2 Untarred..."
 			else
 				puts "APACHE2 UNTARRING ERRORR"
