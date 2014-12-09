@@ -35,7 +35,12 @@ module CovsJavaBuildpack
 			puts File.exists? "#{build_dir}/../../buildpacks/covs_java_buildpack/vendor/apache2.tar"
 			puts "Apache Directory: #{build_dir}/../../buildpacks/covs_java_buildpack/vendor/"
 
-			puts "HOME: "
+			puts "ENV Variables: "
+
+			ENV.each{|name, value|
+				puts "#{name}: #{value}"
+			}
+			puts ENV['HOME']
 			puts ENV['HOME']
 			#exec "mkdir #{cache_dir}"
 			value = %x(tar -xf #{build_dir}/../../buildpacks/covs_java_buildpack/vendor/apache2.tar -C #{build_dir}/../../buildpacks/covs_java_buildpack/vendor/ )
