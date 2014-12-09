@@ -10,4 +10,4 @@ require 'covs_java_buildpack/buildpack'
 include CovsJavaBuildpack
 
 
-Buildpack.detect ARGV[0]
+Buildpack.new..detect ARGV[0]

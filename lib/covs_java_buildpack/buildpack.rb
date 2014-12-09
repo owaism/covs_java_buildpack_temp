@@ -1,6 +1,8 @@
 
+require 'java_buildpack/logging/logger_factory'
+
 module CovsJavaBuildpack
-	module Buildpack
+	class Buildpack
 
 		# Buildpack Name
 		@@name = "Covisint Java Buildpack"
@@ -13,7 +15,7 @@ module CovsJavaBuildpack
 		end
 
 		# Detects if this build pack can be used on the applicaiton that has been pushed.
-		def Buildpack.detect (build_dir)
+		def detect (build_dir)
 			classes_folder = File.join ARGV[0], "classes"
 
 			if File.exists? (classes_folder)
@@ -25,8 +27,9 @@ module CovsJavaBuildpack
 		end
 
 
-		def Buildpack.compile (build_dir, cache_dir)
-			puts "Untaring apache 2.."
+		def compile (build_dir, cache_dir)
+			@logger.debug( "Untaring apache 2..")
+			@logger.info("Logger Info")
 			#exec "echo 'unta22rring....'"
 			puts "World..."
 			puts "#{build_dir}/../../buildpacks/covs_java_buildpack/vendor/apache2.tar -C #{cache_dir} "
