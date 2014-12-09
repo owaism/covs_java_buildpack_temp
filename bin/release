@@ -1,12 +1,4 @@
-#!/usr/bin/env ruby
+#!/usr/bin/env bash
+# bin/release <build-dir>
 
-
-value = "-"
-
-ENV.each{|name, value1|
-				value = value + "#{name} - #{value1},"
-			}
-
-value = value + "-"
-
-puts "echo '#{value}'"
+echo -e "---\ndefault_process_types:\n  web: ./boot.rb"
