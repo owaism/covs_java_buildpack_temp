@@ -1,11 +1,14 @@
 #!/usr/bin/env ruby
 
-value = "-"
 
-ENV.each{|name, value1|
-				value = value + "#{name} - #{value1},"
-			}
+$stdout.print "RUBY >>>>>>>>>>>>>>>\n\n\n\n"
 
-value = value + "-"
+#value = "-"
 
-puts "echo '#{value}'"
+#ENV.each{|name, value1|
+#				value = value + "#{name} - #{value1},"
+#			}
+
+#value = value + "-"
+
+#puts "echo '#{value}'"
