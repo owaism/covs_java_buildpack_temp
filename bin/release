@@ -5,4 +5,4 @@
 
 #echo -e "---\ndefault_process_types:\n web: sh boot.sh 2>&1"
 
-puts ENV['port']
+puts File.exists? "boot.rb"
