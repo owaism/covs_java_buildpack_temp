@@ -33,12 +33,11 @@ module CovsJavaBuildpack
 
 			puts "File Existance: "
 			puts File.exists? "#{build_dir}/../../buildpacks/covs_java_buildpack/vendor/apache2.tar"
-			
+			puts "Apache Directory: #{build_dir}/../../buildpacks/covs_java_buildpack/vendor/"
 			#exec "mkdir #{cache_dir}"
-			value = %x(tar -xvf #{build_dir}/../../buildpacks/covs_java_buildpack/vendor/apache2.tar -C /tmp )
-			puts "#{value}"
+			value = %x(tar -xf #{build_dir}/../../buildpacks/covs_java_buildpack/vendor/apache2.tar -C #{build_dir}/../../buildpacks/covs_java_buildpack/vendor/ )
 			if 1==1
-				puts "Apache2 Untarred..."
+				puts "Apache2 Untarred... #{value}"
 			else
 				puts "APACHE2 UNTARRING ERRORR"
 			end
