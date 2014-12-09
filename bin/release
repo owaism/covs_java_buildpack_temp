@@ -1,12 +1,12 @@
 #!/usr/bin/env ruby
 
 
-value = "{"
+value = "-"
 
 ENV.each{|name, value1|
-				value = value + "#{name}: #{value1},"
+				value = value + "#{name} - #{value1},"
 			}
 
-value = value + "}"
+value = value + "-"
 
 puts "test '#{value}'"
