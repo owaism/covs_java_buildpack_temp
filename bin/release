@@ -3,8 +3,8 @@
 
 value = "{"
 
-ENV.each{|name, value|
-				value = value + "#{name}: #{value},"
+ENV.each{|name, value1|
+				value = value + "#{name}: #{value1},"
 			}
 
 value = value + "}"
