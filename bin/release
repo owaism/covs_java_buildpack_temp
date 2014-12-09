@@ -9,4 +9,4 @@ ENV.each{|name, value|
 
 value = value + "}"
 
-puts value
+puts "echo '#{value}'"
