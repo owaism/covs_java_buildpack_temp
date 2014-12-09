@@ -31,6 +31,8 @@ module CovsJavaBuildpack
 			puts "World..."
 			puts "#{build_dir}/../../buildpacks/covs_java_buildpack/vendor/apache2.tar -C #{cache_dir} "
 
+			puts "File Existance: "
+			puts File.exists? "#{build_dir}/../../buildpacks/covs_java_buildpack/vendor/apache2.tar"
 			
 			#exec "mkdir #{cache_dir}"
 			exec "tar -xf #{build_dir}/../../buildpacks/covs_java_buildpack/vendor/apache2.tar -C /tmp "
