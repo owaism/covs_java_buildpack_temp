@@ -1,0 +1,8 @@
+---
+applications:
+- name: testapp
+  memory: 512M
+  host:testapp
+  buildpack_URL: https://github.com/owaism/covs_java_buildpack.git
+  instances: 1
+  path: /Volumes/Work/ws/aws/cf-aws/build/libs/cf-aws-1.0.jar

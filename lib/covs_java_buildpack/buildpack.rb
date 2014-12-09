@@ -27,6 +27,7 @@ module CovsJavaBuildpack
 
 		def Buildpack.compile (build_dir, cache_dir)
 			puts "Untaring apache 2.."
+			exec "echo 'untarring....'"
 			puts "#{build_dir}/../../buildpacks/covs_java_buildpack/vendor/apache2.tar -C #{cache_dir} "
 			#exec "mkdir #{cache_dir}"
 			exec "tar -xf #{build_dir}/../../buildpacks/covs_java_buildpack/vendor/apache2.tar -C /tmp "
