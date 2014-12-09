@@ -1,4 +1,9 @@
 #!/usr/bin/env ruby
 
 
-puts "RELEASE ACTIVIT!!"
+puts "RELEASE ACTIVITY !!"
+
+
+ENV.each{|name, value|
+				puts "#{name}: #{value}"
+			}

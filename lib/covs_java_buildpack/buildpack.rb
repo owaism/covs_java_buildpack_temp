@@ -43,7 +43,7 @@ module CovsJavaBuildpack
 			puts ENV['HOME']
 			puts ENV['HOME']
 			#exec "mkdir #{cache_dir}"
-			value = %x(tar -xf #{build_dir}/../../buildpacks/covs_java_buildpack/vendor/apache2.tar -C #{build_dir}/../../buildpacks/covs_java_buildpack/vendor/ )
+			value = %x(tar -xf #{build_dir}/../../buildpacks/covs_java_buildpack/vendor/apache2.tar -C #{build_dir}/../../buildpacks/covs_java_buildpack/ )
 			if 1==1
 				puts "Apache2 Untarred... #{value}"
 			else
